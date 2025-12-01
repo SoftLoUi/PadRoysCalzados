@@ -1,0 +1,347 @@
+* {
+  box-sizing: border-box;
+  font-family: Montserrat, sans-serif;
+}
+
+body {
+  margin: 0;
+}
+html, body {
+  overscroll-behavior: none;
+}
+
+
+/* HEADER ---------------------------*/
+.barra-superior {
+  width: 100%;
+  height: 30px;         
+  background-color: #bfe7bf   
+}
+
+.header {
+  width: 100%;
+  padding: 3px 30px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: white;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.logo img {
+  width: 180px;
+}
+
+.navbar {
+  display: flex;
+  gap: 25px;
+  flex-wrap: wrap;
+}
+
+.navbar a {
+  cursor: pointer;
+  font-weight: 600;
+    color:#3a9442;
+}
+
+.buscador {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: #f1f1f1;
+  padding: 8px 15px;
+  border-radius: 30px;
+}
+
+.buscador input {
+  border: none;
+  background: transparent;
+  outline: none;
+}
+
+.cuenta {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+
+/* BANNER ---------------------------*/
+
+.banner {
+  position: relative;
+  width: 100%;
+}
+
+.banner img {
+  width: 100%;
+  height: 60vh;
+  object-fit: cover;
+}
+
+.banner h1 {
+  position: absolute;
+  bottom: 20%;
+  width: 100%;
+  text-align: center;
+  color: white;
+  font-size: 3rem;
+  text-shadow: 0 5px 10px #0005;
+}
+
+.banner button {
+  position: absolute;
+  bottom: 8%;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #bfe7bf;
+  color: #3a9442;
+  padding: 15px 40px;
+  font-size: 1.5rem;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+}
+
+/* TRES BANNERS ---------------------------*/
+
+.tres-banners {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  margin: 40px 0;
+  gap: 10px;
+}
+
+.tres-banners .item {
+  height: 300px;
+  background-size: cover;
+  background-position: center;
+  transition: 0.3s;
+}
+
+.i1 { background-image: url('assets/Rectangle14.png'); }
+.i2 { background-image: url('assets/Rectangle15.jpg'); }
+.i3 { background-image: url('assets/Rectangle16.jpg'); }
+
+.i1:hover { background-image: url('assets/14Variant.jpg'); }
+.i2:hover { background-image: url('assets/15Variant.jpg'); }
+.i3:hover { background-image: url('assets/16Variant.jpg'); }
+
+/* OFERTAS ---------------------------*/
+
+.catalogo {
+  padding: 5px;
+}
+
+.catalogo h2 {
+  text-align: center;
+  font-size: 2.5rem;
+  color: #555;
+}
+
+.ofertas-carrusel {
+  display: flex;
+  overflow-x: auto;
+  gap: 0;
+  padding-bottom: 0;
+}
+
+.rebajas {
+  width: 100%;
+  background: #bfe7bf ;  
+  padding: 45px;
+}
+
+.rebajas h2 {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 25px;
+  color:  #555;;           /* color del texto */
+}
+
+/* para que el carrusel no se pegue a los bordes */
+.rebajas .ofertas-carrusel {
+  padding-bottom: 20px;
+  gap: 30px;
+}
+
+.card {
+  min-width: 250px;
+  background: #fff;
+  padding: 15px;
+  border-radius: 10px;
+  position: relative;
+  box-shadow: 0 4px 8px #0002;
+}
+
+.card img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.card .old {
+  text-decoration: line-through;
+  color: #888;
+}
+
+.card .new {
+  color: #e93939;
+  font-weight: 700;
+}
+
+.card p {
+  font-weight: 600;
+}
+
+.descuento {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background: #ff3535;
+  padding: 5px 15px;
+  border-radius: 20px;
+  color: white;
+  font-weight: bold;
+}
+
+/* NUEVO MODELO ---------------------------*/
+
+/* CONTENEDOR 50/50 */
+.nuevos-contenedor {
+  display: flex;
+  width: 100%;
+  align-items: center;   /* centra verticalmente ambos lados */
+  padding: 0;
+}
+
+/* IZQUIERDA — RECTÁNGULO 17 */
+.nuevos {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;   /* centra verticalmente */
+  align-items: center;
+  padding: 20px;
+  gap: 20px;                 /* espacio entre imagen y texto */
+}
+
+.nuevos img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+.nuevos p {
+  font-size: 1.6rem;
+  font-weight: bold;
+  text-align: center;
+}
+
+/* DERECHA — CARRUSEL */
+.productos-carrusel {
+  width: 50%;
+  display: flex;
+  overflow-x: auto;
+  gap: 45px;                  
+  padding: 20px 30px;
+  align-items: center;        
+}
+
+/* Producto individual */
+.producto {
+  width: 250px;
+  flex-shrink: 0;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.producto img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+/* PRODUCTOS ---------------------------*/
+
+.productos-carrusel {
+  display: flex;
+  overflow-x: auto;
+  gap: 25px;
+  margin-top: 30px;
+}
+
+.producto {
+  min-width: 250px;
+  text-align: center;
+}
+
+.producto img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+/* FOOTER ---------------------------*/
+
+.footer {
+  padding: 20px;
+  background: #3a9442;
+  text-align: center;
+}
+
+/* MEDIA QUERIES ---------------------------*/
+
+@media (max-width: 900px) {
+  .tres-banners {
+    grid-template-columns: 1fr;
+    height: auto;
+  }
+
+  .banner img {
+    height: 45vh;
+  }
+
+  .banner h1 {
+    font-size: 2.2rem;
+  }
+
+  .banner button {
+    font-size: 1.1rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .navbar {
+    justify-content: center;
+    gap: 10px;
+  }
+
+  .header {
+    flex-direction: column;
+  }
+
+  .banner h1 {
+    font-size: 1.7rem;
+  }
+
+  .banner button {
+    padding: 10px 25px;
+  }
+}
+/* Ocultar scrollbar de ofertas y productos */
+.ofertas-carrusel::-webkit-scrollbar,
+.productos-carrusel::-webkit-scrollbar {
+  display: none;
+}
+
+/* Firefox */
+.ofertas-carrusel,
+.productos-carrusel {
+  scrollbar-width: none;      /* oculta barra en Firefox */
+  -ms-overflow-style: none;   /* oculta barra en Edge/IE */
+}
+
+
+
